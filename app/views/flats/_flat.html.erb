@@ -1,0 +1,22 @@
+<div class="col mt-4">
+  <div class="card" style="width: 25rem;">
+    <img src="<%= flat.picture_url %>">
+    <div class="card-body">
+      <h5 class="card-title"><%= flat.name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
+      <div class="d-flex align-items-center my-3">
+        <i class="fa-solid fa-person me-1"></i><%= flat.number_of_guests %>
+        <i class="fa-solid fa-euro-sign me-1 ms-3"></i><%= flat.price_per_night %>
+      </div>
+      <div class="action-link  d-flex justify-content-evenly">
+        <%= link_to "More info", flat_path(flat), class:'text-decoration-none btn btn-outline-primary' %>
+        <%= link_to "Edit", edit_flat_path(flat), class:'text-decoration-none btn btn-outline-secondary'  %>
+        <%= link_to "Remove",
+          flat_path(flat),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+          class:'text-decoration-none btn btn-outline-danger'
+        %>
+      </div>
+    </div>
+  </div>
+</div>

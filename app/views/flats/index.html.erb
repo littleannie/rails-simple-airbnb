@@ -1,0 +1,9 @@
+<div class="container mt-4">
+  <h1>All our flats</h1>
+  <p>All <%= @flats.count %> flats</p>
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <%= render 'flat', flat: flat %>
+    <% end %>
+  </div>
+</div>
