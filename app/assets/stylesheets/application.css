@@ -13,5 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ @import 'components/index';
 
- @import 'components/index'
+body {
+  background-color: pink;
+}
